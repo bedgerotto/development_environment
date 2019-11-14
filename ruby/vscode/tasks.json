@@ -1,0 +1,81 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Rubocop",
+      "command": "docker-compose",
+      "args": [
+        "exec",
+        "web",
+        "rubocop",
+        "--cache",
+        "false",
+        "${relativeFile}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "never",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true
+      },
+      "problemMatcher": {
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+):\\s\\w:\\s(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "message": 4,
+          "loop": true
+        }
+      }
+    },
+    {
+      "label": "Reek",
+      "command": "docker-compose",
+      "args": [
+        "exec",
+        "web",
+        "reek",
+        "${relativeFile}",
+        "-s",
+        "--failure-exit-code",
+        "1"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "never",
+        "focus": false,
+        "panel": "new",
+        "showReuseMessage": true
+      },
+      "problemMatcher": {
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*):(\\d+):\\s(.*)$",
+          "file": 1,
+          "location": 2,
+          "message": 3,
+          "loop": true
+        }
+      }
+    }
+  ]
+}

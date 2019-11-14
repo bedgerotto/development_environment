@@ -1,0 +1,53 @@
+{
+  "files.associations": { 
+      "*.coffee.erb": "coffeescript",
+      "*.coffee": "coffeescript",
+      "*.js.erb": "javascript",
+      "*.scss.erb": "scss",
+      "*.xlsx.axlsx": "ruby",
+      "*.axlsx": "ruby",
+      "*.tt": "ruby"
+  },
+  "gitlens.codeLens.scopes": [],
+  "terminal.integrated.shellArgs.linux": [ "-l" ],
+  "ruby.lint": { "reek": true },
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  "window.zoomLevel": -1,
+  "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "terminal.integrated.fontFamily": "'Mononoki Nerd Font'",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.setLocaleVariables": true,
+  "search.exclude": {
+      "**/node_modules": true,
+      "**/bower_components": true,
+      "**/public/assets": true
+  },
+  "diffEditor.renderSideBySide": false,
+  "indentRainbow.includedLanguages": [
+      "coffeescript"
+  ],
+  "csv-preview.separator": ";",
+  "docker-linter.rubocop.enable": true,
+  "docker-linter.rubocop.machine": "",
+  "emmet.includeLanguages": {
+      "erb": "html"
+  },
+  "window.menuBarVisibility": "hidden",
+  "gitlens.advanced.messages": {
+      "suppressLineUncommittedWarning": true
+  },
+  "gitlens.defaultGravatarsStyle": "retro",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "triggerTaskOnSave.on": true,
+  "triggerTaskOnSave.restart": true,
+  "triggerTaskOnSave.tasks": {
+      "Rubocop": [
+          "**/*.rb"
+      ],
+      "Reek": [
+          "**/*.rb"
+      ]
+  },
+  "triggerTaskOnSave.showStatusBarToggle": true
+}
